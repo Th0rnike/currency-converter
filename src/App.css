@@ -5,17 +5,31 @@
 }
 
 /* App.css */
+/* App.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
+  color: #1a237e;
 }
 
 .wrapper {
@@ -30,11 +44,23 @@ select {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+input[type="number"] {
+  width: 120px;
+  margin-right: 10px;
+}
+
+select {
+  min-width: 150px;
 }
 
 .separator {
   font-size: 24px;
   margin: 10px 0;
+  color: #757575;
 }
 
 /* Styles for the Converter component */
@@ -44,11 +70,60 @@ select {
   margin-bottom: 10px;
 }
 
-input[type="number"] {
-  width: 120px;
+/* Styling the 'From' and 'To' converter components differently */
+.converter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.converter-container select {
+  margin-left: 10px;
   margin-right: 10px;
 }
 
-select {
-  min-width: 100px;
+.converter-container input[type="number"] {
+  width: 100px;
 }
+
+/* Styling the 'Equals' sign */
+.equals-sign {
+  font-size: 24px;
+  color: #757575;
+}
+
+/* Styling for the 'Swap' button */
+.swap-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swap-button:hover {
+  background-color: #45a049;
+}
+
+.swap-button:focus {
+  outline: none;
+}
+
+/* Styling for error messages */
+.error-message {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
